@@ -77,4 +77,4 @@ gem 'bootstrap', '~> 5.1.3'
 
 gem 'rails-controller-testing'
 
-gem 'thin'
+# gem 'thin'
