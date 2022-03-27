@@ -1,0 +1,38 @@
+<header class="p-0 mb-3 border-bottom bg-success text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <div class="p-2 flex-grow-1 bd-highlight">
+        <strong>
+          <%= link_to "Twitter KW-5", root_path, id: "logo", class: "nav-link px-2 link-light" %>
+        </strong>
+      </div>
+
+        <div class="hstack gap-2">
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-right mb-md-0 d-flex me-2">
+            <li>
+              <%= link_to "Home", root_path, class: "nav-link px-2 link-light" %>
+            </li>
+            <li>
+              <%= link_to "Help", help_path, class: "nav-link px-2 link-light" %>
+            </li>
+          </ul>
+
+          <div class="dropdown text-center">
+            <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+
+              <label>Account</label>
+            </a>
+                
+            <ul class="dropdown-menu text-small bg-success" aria-labelledby="dropdownUser1" style="--bs-bg-opacity: .6;">
+              <li><a class="dropdown-item link-dark" href="#">Settings</a></li>
+              <li><a class="dropdown-item link-dark" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item link-dark" href="#">Sign out</a></li>
+            </ul>
+        </div>
+        <%= link_to "Log in", '#', class: "nav-link px-2 link-light" %>
+      </div>
+    </div>
+  </div>
+</header>
