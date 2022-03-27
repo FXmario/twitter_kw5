@@ -1,0 +1,16 @@
+current directory: /mnt/d/rails_projects/twitter_kw5/vendor/cache/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/usr/local/rbenv/versions/3.1.0/bin/ruby -I /usr/local/rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20220328-856-1p1qui.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/d/rails_projects/twitter_kw5/vendor/cache/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= clean
+
+current directory: /mnt/d/rails_projects/twitter_kw5/vendor/cache/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\=
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /mnt/d/rails_projects/twitter_kw5/vendor/cache/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20220328-856-li9ed6
