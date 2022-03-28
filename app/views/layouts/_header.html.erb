@@ -1,38 +1,61 @@
 <header class="p-0 mb-1 border-bottom bg-success text-white">
   <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <div class="d-flex flex-wrap align-items-start justify-content-start justify-content-lg-start">
 
-      <div class="p-2 flex-grow-1 bd-highlight">
+      <div class="me-auto p-2 bd-highlight">
         <strong>
-          <%= link_to "Twitter KW-5", root_path, id: "logo", class: "nav-link px-2 link-light" %>
+          <%= link_to "Twitter KW-5", root_path, id: "logo", class: "nav-link px-1 link-light" %>
         </strong>
       </div>
 
-        <div class="hstack gap-2">
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-right mb-md-0 d-flex me-2">
-            <li>
-              <%= link_to "Home", root_path, class: "nav-link px-2 link-light" %>
-            </li>
-            <li>
-              <%= link_to "Help", help_path, class: "nav-link px-2 link-light" %>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-md navbar-dark bg-success">
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="dropdown text-center">
-            <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
 
-              <label>Account</label>
-            </a>
-                
-            <ul class="dropdown-menu text-small bg-success" aria-labelledby="dropdownUser1" style="--bs-bg-opacity: .6;">
-              <li><a class="dropdown-item link-dark" href="#">Settings</a></li>
-              <li><a class="dropdown-item link-dark" href="#">Profile</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item link-dark" href="#">Sign out</a></li>
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to "Home", root_path, class: "nav-link px-2 link-light" %>
+              </li>
+              <li>
+                <%= link_to "Help", help_path, class: "nav-link px-2 link-light" %>
+              </li>
+
+            <% if logged_in? %>
+
+              <li>
+                <%= link_to "Users", '#', class: "nav-link px-2 link-light" %>
+              </li>
+
+              <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+                      
+                <ul class="dropdown-menu bg-success" aria-labelledby="dropdownUser1">
+                  <li>
+                    <%= link_to "Profile", current_user, class: "dropdown-item link-dark" %>
+                  </li>
+                  <li>
+                    <%= link_to "Setting", '#', class: "dropdown-item link-dark" %>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li>
+                    <%= link_to "Sign out", logout_path, class: "dropdown-item link-dark", method: "delete" %>
+                  </li>
+                </ul>
+              </li>
             </ul>
+            <% else %>  
+              <%= link_to "Log in", login_path, class: "nav-link px-2 link-light" %>
+            <% end %>
         </div>
-        <%= link_to "Log in", '#', class: "nav-link px-2 link-light" %>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
