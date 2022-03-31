@@ -10,14 +10,19 @@
 			<br>
 			
 			<%= f.label :password, class: "form-label" %>
-			<%= f.password_field :password, class: "form-control" %>
+			<%= f.password_field :password, class: "form-control" %>	
+			<%= f.label :remember_me, class: "checkbox inline" do %>
+				<%= f.check_box :remember_me, class: "form-check-input" %>
+				<span>Remember me on this computer</span>
+			<% end %>
 
 			<br>
 
-			<div class="d-grid gap-2">
+			<div class="d-grid gap-1">
 				<%= f.submit "Log in", class: "btn btn-outline-success" %>
 			</div>
 		<% end %>
+
 		<p>New user? <%= link_to "Sign up now!", signup_path, class: "link-success" %></p>
 	</div>
 </div>
