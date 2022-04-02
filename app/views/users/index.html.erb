@@ -1,0 +1,12 @@
+<% provide(:title, "All users") %>
+<h1>All Users</h1>
+
+<%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-end) %>
+
+<ul class="list-group">
+	<%= render @users %>
+</ul>
+
+<br>
+
+<%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-end) %>

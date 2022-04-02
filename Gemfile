@@ -76,3 +76,9 @@ end
 gem 'bootstrap', '~> 5.1.3'
 
 gem 'rails-controller-testing'
+
+gem 'faker', '~> 2.20'
+
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+
+gem 'will_paginate-bootstrap-style'
